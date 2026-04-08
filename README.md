@@ -7,9 +7,9 @@ This anonymous repository is provided as supplementary material for the rebuttal
 
 To address this, we have comprehensively evaluated and visualized the effects of the preservation coefficient ($\lambda$) ranging from 0.0 to 2.0, with a fine-grained interval of 0.1. We plotted these results as trade-off curves to explicitly illustrate the dynamic balance between concept erasure (Concept Ratio, CR) and model preservation (CS) across various concept categories (Style, NSFW, and Object). 
 
-The detailed visualization, which also highlights the optimal intervals for different concepts, has been uploaded and can be viewed via the following anonymous link: 
+ 
 
-![Performance Curves](REBUTTAL_03.png)
+![Lambda_Performance Curves](lambda_tradeoff_curves_discrete.png)
 
 
 ## 1. Performance Trends Across Different Intervention Strengths
