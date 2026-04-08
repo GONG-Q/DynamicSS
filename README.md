@@ -1,12 +1,19 @@
-# DynamicSS
-
 
 This anonymous repository is provided as supplementary material for the rebuttal phase. It contains additional visualizations and performance curves requested by the reviewers to further demonstrate the efficacy and stability of our proposed method (**DSS**).
 
 ---
 
+**We fully agree with the reviewer's insightful suggestion that a detailed analysis of different $\lambda$ values is crucial.** 
+
+To address this, we have comprehensively evaluated and visualized the effects of the preservation coefficient ($\lambda$) ranging from 0.0 to 2.0, with a fine-grained interval of 0.1. We plotted these results as trade-off curves to explicitly illustrate the dynamic balance between concept erasure (Concept Ratio, CR) and model preservation (CS) across various concept categories (Style, NSFW, and Object). 
+
+The detailed visualization, which also highlights the optimal intervals for different concepts, has been uploaded and can be viewed via the following anonymous link: 
+
+![Performance Curves](REBUTTAL_03.png)
+
+
 ## 1. Performance Trends Across Different Intervention Strengths
-**Related to: Response to Reviewer GugW (Q5)**
+
 
 As discussed in our rebuttal, directly aligning the hyperparameters of different training-free methods is non-trivial due to their different physical meanings. To ensure a fair comparison, we systematically sampled different parameter-guided intervention strengths (**Low, Medium, High**) for each method. 
 
@@ -24,7 +31,7 @@ The figure below illustrates how the evaluation metrics change as the interventi
 ---
 
 ## 2. Visualization of Semantic Drift
-**Related to: Response to Reviewer GugW (Q1)**
+
 
 To intuitively demonstrate the mechanistic differences between SAFREE, STG, and DSS, we visualize the semantic drift of the target concept and neighboring concepts under strong erasure settings.
 
@@ -34,6 +41,3 @@ To intuitively demonstrate the mechanistic differences between SAFREE, STG, and 
 **Key Observations:**
 *   **SAFREE & STG:** The forced orthogonal projection or unconstrained guidance often pushes the latent features into meaningless semantic "voids." This not only destroys the target concept but also triggers severe **semantic drift**, causing significant collateral damage to neighboring concepts.
 *   **DSS (Ours):** By modeling sensitive semantic boundaries, DSS pulls the features towards **genuine safe concept anchors**. The visualization clearly shows that DSS thoroughly erases the target concept while strictly constraining the semantic drift, thereby perfectly protecting the integrity of neighboring concepts.
-
----
-*Note: This repository is strictly for the double-blind review process and will be deleted after the review period concludes.*
